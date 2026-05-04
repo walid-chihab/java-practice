@@ -8,7 +8,7 @@ public class Main {
 
         A1.affichInfo();
         A2.affichInfo();
-        A1.setAge(0);
+        A1.setAge(10);
         A1.setNom("Buddy");
         A1.setType("canine");
         System.out.println("After modification of Animal 1:");
