@@ -12,7 +12,7 @@
 
 ---
 
-## 📌 À propos du projet
+##  À propos du projet
 
 Ce dépôt est dédié à l’apprentissage approfondi du langage **Java** à travers des travaux pratiques, des exercices progressifs et des mini-implémentations orientées objet.
 
@@ -27,7 +27,7 @@ Ce repository représente également ma progression personnelle en tant qu’ét
 
 ---
 
-## 🎯 Objectifs
+##  Objectifs
 
 - Renforcer les bases du langage Java
 - Maîtriser les concepts fondamentaux de la POO
@@ -38,7 +38,7 @@ Ce repository représente également ma progression personnelle en tant qu’ét
 
 ---
 
-## 🧠 Technologies & Outils
+##  Technologies & Outils
 
 - Java
 - Maven
@@ -49,7 +49,7 @@ Ce repository représente également ma progression personnelle en tant qu’ét
 
 ---
 
-## 📚 Contenu Technique
+##  Contenu Technique
 
 ### Fondamentaux Java
 - Variables et types primitifs
