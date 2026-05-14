@@ -8,12 +8,10 @@ public class calculatrice {
         res = a + b;
         return res;
     }
-
+ 
     public double soustraction(double a, double b) {
         res = a - b;
-        return res;
-    }
-
+        return res;  
     public double multiplication(double a, double b) {
         res = a * b;
         return res;
@@ -43,5 +41,4 @@ public class calculatrice {
         res = Math.pow(a, b);
         return res;
     }
-}
 }
