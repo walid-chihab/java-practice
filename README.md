@@ -78,22 +78,41 @@ Ce repository représente également ma progression personnelle en tant qu’ét
 
 ## 🏗️ Structure du Repository
 
-```text
 java-practice/
 │
-├── tp1-university-basics/
-│   ├── exercice1/
-│   ├── exercice2/
-│   └── exercice3/
+├── 00-tp1-university-basics
+│   ├── exercice1
+│   ├── exercice2
+│   ├── exercice3
+│   ├── exercice4
+│   └── exercice5
 │
-├── tp2-exceptions/
-│   ├── exercice1/
-│   ├── exercice2/
-│   └── exercice3/
+├── 02-exceptions
+│   ├── pile-exercice
+│   ├── division-exercice
+│   └── invalid-age-exception
 │
-├── tp3-lambda/
-│   ├── exercice1/
-│   ├── exercice2/
-│   └── exercice3/
+├── 03-poo-basics
+│   ├── string-manipulation
+│   ├── product-class
+│   └── simple-objects
+│
+├── 04-poo-advanced-oop
+│   ├── bibliotheque-system
+│   ├── universite-system
+│   ├── employee-department-system
+│   └── application-manager-system
+│
+├── 05-streams-lambda
+│   ├── filter-product-stream
+│   ├── order-stream-system
+│   ├── store-streams
+│   └── integer-stream-exercises
+│
+├── 06-projects-oop-mixed
+│   ├── parc-auto-system
+│   ├── vehicle-management-system
+│   ├── goauto-park-system
+│   └── application-platform-system
 │
 └── README.md

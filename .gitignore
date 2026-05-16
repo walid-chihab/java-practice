@@ -1,1 +1,2 @@
-*.classn*.logn
+*.classn /* Fichiers de classes Java compilées */
+*.logn /* Fichiers de log */
