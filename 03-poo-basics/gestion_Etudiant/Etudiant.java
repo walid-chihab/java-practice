@@ -11,14 +11,20 @@ public class Etudiant extends Personne {
         this.matricule = matricule;
         this.notes = new HashMap<>();
     }
+    public String   getMatricule (){
+        return this.matricule ;
+    }
+    public void setMatricule(String matricule){
+        this.matricule = matricule ;
+    }
 
     @Override
-    public void affich_Info(){
+    public void afficherInfo(){
         System.out.println("nom :"+getNom());
-        System.out.println("id"+getId());
+        System.out.println("id :"+getId());
         System.out.println("prenom :"+getPrenom());
-        System.out.print("matricule:"+matricule);
-        System.out.println("notes"+notes);
+        System.out.println("matricule :"+matricule);
+        System.out.println("notes :"+notes);
     }
 
     public  void ajouterNote(String matiere, double note) {
@@ -27,14 +33,18 @@ public class Etudiant extends Personne {
 
     @Override
     public boolean equals(Object var1){
-        if (this == obj)
+        if (this == var1)
             return true;
-        else if( obj != null && this.class() == obj.getClass()){
+        else if( var1 != null && this.getClass() == var1.getClass()){
             //maintenant on peut faire le cast 
             Etudiant var2 = (Etudiant)var1;
-            return this.matricule.equals(var2);
+            return this.matricule.equals(var2.matricule);
       }
       else 
         return false;
+    }
+    @Override
+    public int hashCode(){
+        return matricule.hashCode();
     }
 }

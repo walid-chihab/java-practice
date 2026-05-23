@@ -1,11 +1,11 @@
 abstract class Personne {
 
     private int id ;
-    private string nom ;
-    private string prenom ;
+    private String nom ;
+    private String  prenom ;
 
     //constructeur 
-    public Personne(int id, string nom, string prenom ){
+    public Personne(int id, String nom, String prenom ){
         this.id = id ;
         this.nom = nom ;
         this.prenom = prenom ;
@@ -27,10 +27,10 @@ abstract class Personne {
         this.nom = nom;
 
     }
-    public void setPrenom(string prenom){
+    public void setPrenom(String prenom){
         this.prenom = prenom;
     }
 
     //    // méthode abstraite (pas de corps)
-    abstract  public void affich_Info();
+    abstract  public void afficherInfo();
 }
