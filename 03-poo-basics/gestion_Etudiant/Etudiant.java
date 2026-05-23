@@ -17,6 +17,12 @@ public class Etudiant extends Personne {
     public void setMatricule(String matricule){
         this.matricule = matricule ;
     }
+    public Map<String, Double> getNotes() {
+    return notes;
+    }
+    public void setNotes(Map<String, Double> notes) {
+        this.notes = notes;
+    }
 
     @Override
     public void afficherInfo(){
