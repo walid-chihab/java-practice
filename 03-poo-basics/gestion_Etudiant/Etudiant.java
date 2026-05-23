@@ -25,4 +25,16 @@ public class Etudiant extends Personne {
         notes.put(matiere,note);
     }
 
+    @Override
+    public boolean equals(Object var1){
+        if (this == obj)
+            return true;
+        else if( obj != null && this.class() == obj.getClass()){
+            //maintenant on peut faire le cast 
+            Etudiant var2 = (Etudiant)var1;
+            return this.matricule.equals(var2);
+      }
+      else 
+        return false;
+    }
 }
