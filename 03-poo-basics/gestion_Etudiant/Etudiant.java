@@ -1,14 +1,28 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Etudiant extends Personne {
     
-    public Etudiant(int id ,string nom, string prenom){
+    private String  matricule;
+    private Map<String ,Double > notes;
+
+    public Etudiant(int id ,String nom, String prenom, String matricule){
         super (id ,nom, prenom);
+        this.matricule = matricule;
+        this.notes = new HashMap<>();
     }
 
     @Override
     public void affich_Info(){
-        printf ("etudiant ...");
+        System.out.println("nom :"+getNom());
+        System.out.println("id"+getId());
+        System.out.println("prenom :"+getPrenom());
+        System.out.print("matricule:"+matricule);
+        System.out.println("notes"+notes);
     }
-     
-    
+
+    public  void ajouterNote(String matiere, double note) {
+        notes.put(matiere,note);
+    }
 
 }
