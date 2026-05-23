@@ -7,7 +7,6 @@ import java.util.List;
 
 
 public class Universite{ 
-
     private Set<Etudiant> etudiants ;
 
     //constructeur 
@@ -15,9 +14,11 @@ public class Universite{
         this.etudiants = new HashSet<>();
     }
 
+
     public void  ajouterEtudiant(Etudiant e){
         etudiants.add(e);
     }
+
     public Etudiant  rechercherEtudiantParMatricule(String matricule){
        // etudiants.contains(matricule);
        for ( Etudiant e : etudiants){
@@ -29,6 +30,7 @@ public class Universite{
        return null;//meme le null sera presenter comme un obj etudiant mais contient le null
     }
 
+
     public void afficherEtudiants(){
          for ( Etudiant e : etudiants){
             e.afficherInfo();
@@ -36,11 +38,13 @@ public class Universite{
         }
     }
 
+
     public void afficherNotesEtudiant(Etudiant e){
         for (Map.Entry<String, Double> entry : e.getNotes().entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
     }
+
 
     public List<Etudiant> filtrerEtudiantsParMatiere(String matiere){
         List<Etudiant> res = new ArrayList<>();
@@ -50,31 +54,27 @@ public class Universite{
                 res.add(e);
             }
         }
-
         return res;
     }
+
+    //
     public double obtenirMoyenne(Etudiant e){
-
         double somme = 0;
-
         for(double note : e.getNotes().values()){
             somme += note;
         }
-
         return somme / e.getNotes().size();
     }
 
+
     public List<Etudiant> filtrerEtudiantsParMoyenne(double seuil){
-
         List<Etudiant> res = new ArrayList<>();
-
         for(Etudiant e : etudiants){
 
             if(obtenirMoyenne(e) > seuil){
                 res.add(e);
             }
         }
-
         return res;
     }
 }
