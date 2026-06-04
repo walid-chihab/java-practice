@@ -7,6 +7,7 @@ import java.util.List;
 
 
 public class Universite{ 
+    //set : collection d'objets sans ordre et sans doublons , par  
     private Set<Etudiant> etudiants ;
 
     //constructeur 
@@ -40,13 +41,14 @@ public class Universite{
 
 
     public void afficherNotesEtudiant(Etudiant e){
+
         for (Map.Entry<String, Double> entry : e.getNotes().entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
     }
 
 
-    public List<Etudiant> filtrerEtudiantsParMatiere(String matiere){
+    public List<Etudiant> filt rerEtudiantsParMatiere(String matiere){
         List<Etudiant> res = new ArrayList<>();
 
         for(Etudiant e : etudiants){
