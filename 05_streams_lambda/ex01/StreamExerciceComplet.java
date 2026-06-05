@@ -23,10 +23,11 @@ public class StreamExerciceComplet {
         nombres.stream()
                .filter(n -> n % 2 != 0)  // filtre les impairs
                .map(n -> n * 2)          // multiplication par 2
-               .forEach(System.out::println);
+               .forEach(System.out::println);// affichage du résultat converti
+
 
         // d. Récupérer les nombres impairs dans un Set
-        Set<Integer> impairsSet = nombres.stream()
+        Set<Integer> impairsSet = nombres.stream() 
                 .filter(n -> n % 2 != 0)
                 .collect(Collectors.toSet());
         System.out.println("\nd. Set des nombres impairs : " + impairsSet);
@@ -40,37 +41,38 @@ public class StreamExerciceComplet {
         // f. Utiliser « reduce » pour chercher le maximum des nombres impairs
         Optional<Integer> maxImpair = nombres.stream()
                 .filter(n -> n % 2 != 0)
-                .reduce(Integer::max);//trouve le max parmi les impairs, retourne un Optional pour gérer le cas où il n'y aurait aucun impair
+                .reduce(Integer::max);
         System.out.println("\nf. Maximum des nombres impairs : " + 
-                (maxImpair.isPresent() ? maxImpair.get() : "aucun"));//gère le cas où il n'y aurait aucun impair
+                (maxImpair.isPresent() ? maxImpair.get() : "aucun"));
 
         // g. Calculer la somme des carrés des nombres impairs
         int sommeCarresImpairs = nombres.stream()
                 .filter(n -> n % 2 != 0)
                 .map(n -> n * n)
-                .reduce(0, Integer::sum);//somme les carrés des impairs dans la listes'appelle sommeCarresImpairs
+                .reduce(0, Integer::sum);
         System.out.println("\ng. Somme des carrés des impairs : " + sommeCarresImpairs);
 
         // h. Déterminer le maximum des carrés des nombres impairs qui ne dépassent pas 100
         Optional<Integer> maxCarreInf100 = nombres.stream()
                 .filter(n -> n % 2 != 0)
                 .map(n -> n * n)
-                .filter(carre -> carre <= 100)//garde les carrés inférieurs ou égaux à 100
-                .max(Integer::compareTo);//trouve le max parmi les carrés filtrés
-        System.out.println("\nh. Maximum des carrés impairs ≤ 100 : " + (maxCarreInf100.isPresent() ? maxCarreInf100.get() : "aucun"));
+                .filter(carre -> carre <= 100)
+                .max(Integer::compareTo);
+        System.out.println("\nh. Maximum des carrés impairs ≤ 100 : " + 
+                (maxCarreInf100.isPresent() ? maxCarreInf100.get() : "aucun"));
 
         // i. Collecter les nombres supérieurs à 10 dans une liste triée en ordre décroissant
-        List<Integer> superieurs10Desc = nombres.stream()//flux des nombres [12, 7, 19, 4, 21, 8, 3, 10, 14, 5]
-                .filter(n -> n > 10) //garde les nombres > 10 → [12, 19, 21, 14]
-                .sorted(Comparator.reverseOrder())// trie en ordre décroissant → [21, 19, 14, 12]
-                .collect(Collectors.toList());// transforme le flux en une List → [21, 19, 14, 12]
+        List<Integer> superieurs10Desc = nombres.stream()
+                .filter(n -> n > 10)
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
         System.out.println("\ni. Nombres > 10 triés décroissants : " + superieurs10Desc);
 
         // j. Trouver le plus petit nombre carré impair
-        Optional<Integer> plusPetitCarreImpair = nombres.stream()//parcourt la liste de nombres
+        Optional<Integer> plusPetitCarreImpair = nombres.stream()
                 .filter(n -> n % 2 != 0)
                 .map(n -> n * n)
-                .min(Integer::compareTo);//trouve le minimum parmi les carrés impairs
+                .min(Integer::compareTo);
         System.out.println("\nj. Plus petit carré impair : " + 
                 (plusPetitCarreImpair.isPresent() ? plusPetitCarreImpair.get() : "aucun"));
     }
