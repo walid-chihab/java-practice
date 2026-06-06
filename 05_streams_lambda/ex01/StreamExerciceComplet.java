@@ -49,7 +49,7 @@ public class StreamExerciceComplet {
         int sommeCarresImpairs = nombres.stream()
                 .filter(n -> n % 2 != 0)
                 .map(n -> n * n)
-                .reduce(0, Integer::sum);
+                .reduce(0, Integer::sum);// le premeir parametre present l'element neutre d'operation ci n'existe pas on peut annuler l'attr
         System.out.println("\ng. Somme des carrés des impairs : " + sommeCarresImpairs);
 
         // h. Déterminer le maximum des carrés des nombres impairs qui ne dépassent pas 100
